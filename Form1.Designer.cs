@@ -57,13 +57,10 @@
             this.dataGridViewReporte = new System.Windows.Forms.DataGridView();
             this.buttonMostrar = new System.Windows.Forms.Button();
             this.buttonOrdenar = new System.Windows.Forms.Button();
-            this.buttonMEstudiantes = new System.Windows.Forms.Button();
-            this.label14 = new System.Windows.Forms.Label();
-            this.dataGridViewEstudiantes = new System.Windows.Forms.DataGridView();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Taller = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnCantidadAlumnos = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewReporte)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEstudiantes)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -289,12 +286,12 @@
             this.dataGridViewReporte.Name = "dataGridViewReporte";
             this.dataGridViewReporte.RowHeadersWidth = 51;
             this.dataGridViewReporte.RowTemplate.Height = 24;
-            this.dataGridViewReporte.Size = new System.Drawing.Size(609, 153);
+            this.dataGridViewReporte.Size = new System.Drawing.Size(441, 153);
             this.dataGridViewReporte.TabIndex = 26;
             // 
             // buttonMostrar
             // 
-            this.buttonMostrar.Location = new System.Drawing.Point(823, 22);
+            this.buttonMostrar.Location = new System.Drawing.Point(932, 13);
             this.buttonMostrar.Name = "buttonMostrar";
             this.buttonMostrar.Size = new System.Drawing.Size(103, 36);
             this.buttonMostrar.TabIndex = 27;
@@ -304,41 +301,13 @@
             // 
             // buttonOrdenar
             // 
-            this.buttonOrdenar.Location = new System.Drawing.Point(998, 23);
+            this.buttonOrdenar.Location = new System.Drawing.Point(594, 239);
             this.buttonOrdenar.Name = "buttonOrdenar";
             this.buttonOrdenar.Size = new System.Drawing.Size(205, 35);
             this.buttonOrdenar.TabIndex = 28;
             this.buttonOrdenar.Text = "Ordenar Alfabeticamente";
             this.buttonOrdenar.UseVisualStyleBackColor = true;
             this.buttonOrdenar.Click += new System.EventHandler(this.buttonOrdenar_Click);
-            // 
-            // buttonMEstudiantes
-            // 
-            this.buttonMEstudiantes.Location = new System.Drawing.Point(1028, 269);
-            this.buttonMEstudiantes.Name = "buttonMEstudiantes";
-            this.buttonMEstudiantes.Size = new System.Drawing.Size(175, 37);
-            this.buttonMEstudiantes.TabIndex = 29;
-            this.buttonMEstudiantes.Text = "Mostrar Estudiantes";
-            this.buttonMEstudiantes.UseVisualStyleBackColor = true;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(594, 269);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(77, 16);
-            this.label14.TabIndex = 30;
-            this.label14.Text = "Estudiantes";
-            // 
-            // dataGridViewEstudiantes
-            // 
-            this.dataGridViewEstudiantes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewEstudiantes.Location = new System.Drawing.Point(594, 312);
-            this.dataGridViewEstudiantes.Name = "dataGridViewEstudiantes";
-            this.dataGridViewEstudiantes.RowHeadersWidth = 51;
-            this.dataGridViewEstudiantes.RowTemplate.Height = 24;
-            this.dataGridViewEstudiantes.Size = new System.Drawing.Size(609, 150);
-            this.dataGridViewEstudiantes.TabIndex = 31;
             // 
             // Nombre
             // 
@@ -354,14 +323,22 @@
             this.Taller.Name = "Taller";
             this.Taller.Width = 125;
             // 
+            // btnCantidadAlumnos
+            // 
+            this.btnCantidadAlumnos.Location = new System.Drawing.Point(847, 239);
+            this.btnCantidadAlumnos.Name = "btnCantidadAlumnos";
+            this.btnCantidadAlumnos.Size = new System.Drawing.Size(188, 35);
+            this.btnCantidadAlumnos.TabIndex = 29;
+            this.btnCantidadAlumnos.Text = "Cantidad Total Estudiantes";
+            this.btnCantidadAlumnos.UseVisualStyleBackColor = true;
+            this.btnCantidadAlumnos.Click += new System.EventHandler(this.btnCantidadAlumnos_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1334, 554);
-            this.Controls.Add(this.dataGridViewEstudiantes);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.buttonMEstudiantes);
+            this.ClientSize = new System.Drawing.Size(1061, 554);
+            this.Controls.Add(this.btnCantidadAlumnos);
             this.Controls.Add(this.buttonOrdenar);
             this.Controls.Add(this.buttonMostrar);
             this.Controls.Add(this.dataGridViewReporte);
@@ -395,7 +372,6 @@
             this.Text = "Formulario Principal";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewReporte)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEstudiantes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -431,11 +407,9 @@
         private System.Windows.Forms.DataGridView dataGridViewReporte;
         private System.Windows.Forms.Button buttonMostrar;
         private System.Windows.Forms.Button buttonOrdenar;
-        private System.Windows.Forms.Button buttonMEstudiantes;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.DataGridView dataGridViewEstudiantes;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Taller;
+        private System.Windows.Forms.Button btnCantidadAlumnos;
     }
 }
 

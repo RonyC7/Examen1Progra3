@@ -296,5 +296,30 @@ namespace Examen1Progra3
             }
         }
 
+        private void btnCantidadAlumnos_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int cantidadEstudiantes = ObtenerCantidadEstudiantes();
+
+                MessageBox.Show($"Total de estudiantes: {cantidadEstudiantes}", "Cantidad de Estudiantes", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al obtener la cantidad de estudiantes: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private int ObtenerCantidadEstudiantes()
+        {
+            int cantidadEstudiantes = 0;
+            if (File.Exists("Alumnos.txt"))
+            {
+                string[] lineas = File.ReadAllLines("Alumnos.txt");
+                cantidadEstudiantes = lineas.Length;
+            }
+            return cantidadEstudiantes;
+        }
+
     }
 }
