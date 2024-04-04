@@ -54,14 +54,14 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.btnGuardarInscripcion = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewReporte = new System.Windows.Forms.DataGridView();
             this.buttonMostrar = new System.Windows.Forms.Button();
             this.buttonOrdenar = new System.Windows.Forms.Button();
             this.buttonMEstudiantes = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.dataGridViewEstudiantes = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewReporte)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEstudiantes)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -138,6 +138,7 @@
             this.btnGuardarAlumno.TabIndex = 8;
             this.btnGuardarAlumno.Text = "Guardar Datos";
             this.btnGuardarAlumno.UseVisualStyleBackColor = true;
+            this.btnGuardarAlumno.Click += new System.EventHandler(this.btnGuardarAlumno_Click);
             // 
             // textBoxCodigoTaller
             // 
@@ -195,6 +196,7 @@
             this.btnGuardarTaller.TabIndex = 16;
             this.btnGuardarTaller.Text = "Guardar Datos";
             this.btnGuardarTaller.UseVisualStyleBackColor = true;
+            this.btnGuardarTaller.Click += new System.EventHandler(this.btnGuardarTaller_Click);
             // 
             // label9
             // 
@@ -264,6 +266,7 @@
             this.btnGuardarInscripcion.TabIndex = 24;
             this.btnGuardarInscripcion.Text = "Guardar Datos";
             this.btnGuardarInscripcion.UseVisualStyleBackColor = true;
+            this.btnGuardarInscripcion.Click += new System.EventHandler(this.btnGuardarInscripcion_Click);
             // 
             // label13
             // 
@@ -274,15 +277,15 @@
             this.label13.TabIndex = 25;
             this.label13.Text = "Reporte Estudiantes Inscritos";
             // 
-            // dataGridView1
+            // dataGridViewReporte
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(594, 68);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(609, 153);
-            this.dataGridView1.TabIndex = 26;
+            this.dataGridViewReporte.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewReporte.Location = new System.Drawing.Point(594, 68);
+            this.dataGridViewReporte.Name = "dataGridViewReporte";
+            this.dataGridViewReporte.RowHeadersWidth = 51;
+            this.dataGridViewReporte.RowTemplate.Height = 24;
+            this.dataGridViewReporte.Size = new System.Drawing.Size(609, 153);
+            this.dataGridViewReporte.TabIndex = 26;
             // 
             // buttonMostrar
             // 
@@ -320,27 +323,27 @@
             this.label14.TabIndex = 30;
             this.label14.Text = "Estudiantes";
             // 
-            // dataGridView2
+            // dataGridViewEstudiantes
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(594, 312);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(609, 150);
-            this.dataGridView2.TabIndex = 31;
+            this.dataGridViewEstudiantes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewEstudiantes.Location = new System.Drawing.Point(594, 312);
+            this.dataGridViewEstudiantes.Name = "dataGridViewEstudiantes";
+            this.dataGridViewEstudiantes.RowHeadersWidth = 51;
+            this.dataGridViewEstudiantes.RowTemplate.Height = 24;
+            this.dataGridViewEstudiantes.Size = new System.Drawing.Size(609, 150);
+            this.dataGridViewEstudiantes.TabIndex = 31;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1334, 554);
-            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.dataGridViewEstudiantes);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.buttonMEstudiantes);
             this.Controls.Add(this.buttonOrdenar);
             this.Controls.Add(this.buttonMostrar);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridViewReporte);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.btnGuardarInscripcion);
             this.Controls.Add(this.dateTimePicker1);
@@ -370,8 +373,8 @@
             this.Name = "Form1";
             this.Text = "Formulario Principal";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewReporte)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEstudiantes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -404,12 +407,12 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button btnGuardarInscripcion;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewReporte;
         private System.Windows.Forms.Button buttonMostrar;
         private System.Windows.Forms.Button buttonOrdenar;
         private System.Windows.Forms.Button buttonMEstudiantes;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dataGridViewEstudiantes;
     }
 }
 
