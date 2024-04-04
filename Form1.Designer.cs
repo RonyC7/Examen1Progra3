@@ -310,6 +310,7 @@
             this.buttonOrdenar.TabIndex = 28;
             this.buttonOrdenar.Text = "Ordenar Alfabeticamente";
             this.buttonOrdenar.UseVisualStyleBackColor = true;
+            this.buttonOrdenar.Click += new System.EventHandler(this.buttonOrdenar_Click);
             // 
             // buttonMEstudiantes
             // 

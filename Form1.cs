@@ -248,5 +248,53 @@ namespace Examen1Progra3
             return nombreTaller;
         }
 
+        private void buttonOrdenar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string[] inscripciones = File.ReadAllLines("Inscripciones.txt");
+
+                List<Inscripcion> listaInscripciones = new List<Inscripcion>();
+
+                foreach (string inscripcion in inscripciones)
+                {
+                    string[] campos = inscripcion.Split(',');
+
+                    if (campos.Length >= 2)
+                    {
+                        string nombreEstudiante = ObtenerNombreEstudiante(campos[0]);
+
+                        string nombreTaller = ObtenerNombreTaller(campos[1]);
+
+                        listaInscripciones.Add(new Inscripcion(nombreEstudiante, nombreTaller));
+                    }
+                }
+                listaInscripciones = listaInscripciones.OrderBy(x => x.NombreTaller).ToList();
+
+                dataGridViewReporte.Rows.Clear();
+
+                foreach (Inscripcion inscripcion in listaInscripciones)
+                {
+                    dataGridViewReporte.Rows.Add(inscripcion.NombreEstudiante, inscripcion.NombreTaller);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al ordenar los datos: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public class Inscripcion
+        {
+            public string NombreEstudiante { get; set; }
+            public string NombreTaller { get; set; }
+
+            public Inscripcion(string nombreEstudiante, string nombreTaller)
+            {
+                NombreEstudiante = nombreEstudiante;
+                NombreTaller = nombreTaller;
+            }
+        }
+
     }
 }
