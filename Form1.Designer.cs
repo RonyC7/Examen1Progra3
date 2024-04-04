@@ -60,6 +60,8 @@
             this.buttonMEstudiantes = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.dataGridViewEstudiantes = new System.Windows.Forms.DataGridView();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Taller = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewReporte)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEstudiantes)).BeginInit();
             this.SuspendLayout();
@@ -77,21 +79,21 @@
             // 
             this.textBoxDPI.Location = new System.Drawing.Point(131, 47);
             this.textBoxDPI.Name = "textBoxDPI";
-            this.textBoxDPI.Size = new System.Drawing.Size(224, 22);
+            this.textBoxDPI.Size = new System.Drawing.Size(279, 22);
             this.textBoxDPI.TabIndex = 1;
             // 
             // textBoxNombreAlumno
             // 
             this.textBoxNombreAlumno.Location = new System.Drawing.Point(131, 91);
             this.textBoxNombreAlumno.Name = "textBoxNombreAlumno";
-            this.textBoxNombreAlumno.Size = new System.Drawing.Size(224, 22);
+            this.textBoxNombreAlumno.Size = new System.Drawing.Size(279, 22);
             this.textBoxNombreAlumno.TabIndex = 2;
             // 
             // textBoxDireccion
             // 
             this.textBoxDireccion.Location = new System.Drawing.Point(131, 131);
             this.textBoxDireccion.Name = "textBoxDireccion";
-            this.textBoxDireccion.Size = new System.Drawing.Size(224, 22);
+            this.textBoxDireccion.Size = new System.Drawing.Size(279, 22);
             this.textBoxDireccion.TabIndex = 3;
             // 
             // label2
@@ -132,7 +134,7 @@
             // 
             // btnGuardarAlumno
             // 
-            this.btnGuardarAlumno.Location = new System.Drawing.Point(384, 81);
+            this.btnGuardarAlumno.Location = new System.Drawing.Point(436, 83);
             this.btnGuardarAlumno.Name = "btnGuardarAlumno";
             this.btnGuardarAlumno.Size = new System.Drawing.Size(112, 42);
             this.btnGuardarAlumno.TabIndex = 8;
@@ -144,21 +146,21 @@
             // 
             this.textBoxCodigoTaller.Location = new System.Drawing.Point(131, 235);
             this.textBoxCodigoTaller.Name = "textBoxCodigoTaller";
-            this.textBoxCodigoTaller.Size = new System.Drawing.Size(224, 22);
+            this.textBoxCodigoTaller.Size = new System.Drawing.Size(279, 22);
             this.textBoxCodigoTaller.TabIndex = 9;
             // 
             // textBoxNombreTaller
             // 
             this.textBoxNombreTaller.Location = new System.Drawing.Point(131, 284);
             this.textBoxNombreTaller.Name = "textBoxNombreTaller";
-            this.textBoxNombreTaller.Size = new System.Drawing.Size(224, 22);
+            this.textBoxNombreTaller.Size = new System.Drawing.Size(279, 22);
             this.textBoxNombreTaller.TabIndex = 10;
             // 
             // textBoxCosto
             // 
             this.textBoxCosto.Location = new System.Drawing.Point(131, 331);
             this.textBoxCosto.Name = "textBoxCosto";
-            this.textBoxCosto.Size = new System.Drawing.Size(224, 22);
+            this.textBoxCosto.Size = new System.Drawing.Size(279, 22);
             this.textBoxCosto.TabIndex = 11;
             // 
             // label7
@@ -190,7 +192,7 @@
             // 
             // btnGuardarTaller
             // 
-            this.btnGuardarTaller.Location = new System.Drawing.Point(384, 284);
+            this.btnGuardarTaller.Location = new System.Drawing.Point(436, 286);
             this.btnGuardarTaller.Name = "btnGuardarTaller";
             this.btnGuardarTaller.Size = new System.Drawing.Size(112, 38);
             this.btnGuardarTaller.TabIndex = 16;
@@ -240,7 +242,7 @@
             this.comboBoxDPI.FormattingEnabled = true;
             this.comboBoxDPI.Location = new System.Drawing.Point(152, 431);
             this.comboBoxDPI.Name = "comboBoxDPI";
-            this.comboBoxDPI.Size = new System.Drawing.Size(203, 24);
+            this.comboBoxDPI.Size = new System.Drawing.Size(258, 24);
             this.comboBoxDPI.TabIndex = 21;
             // 
             // comboBoxCodigo
@@ -248,19 +250,19 @@
             this.comboBoxCodigo.FormattingEnabled = true;
             this.comboBoxCodigo.Location = new System.Drawing.Point(152, 468);
             this.comboBoxCodigo.Name = "comboBoxCodigo";
-            this.comboBoxCodigo.Size = new System.Drawing.Size(203, 24);
+            this.comboBoxCodigo.Size = new System.Drawing.Size(258, 24);
             this.comboBoxCodigo.TabIndex = 22;
             // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(155, 505);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker1.Size = new System.Drawing.Size(255, 22);
             this.dateTimePicker1.TabIndex = 23;
             // 
             // btnGuardarInscripcion
             // 
-            this.btnGuardarInscripcion.Location = new System.Drawing.Point(384, 459);
+            this.btnGuardarInscripcion.Location = new System.Drawing.Point(436, 461);
             this.btnGuardarInscripcion.Name = "btnGuardarInscripcion";
             this.btnGuardarInscripcion.Size = new System.Drawing.Size(112, 41);
             this.btnGuardarInscripcion.TabIndex = 24;
@@ -280,6 +282,9 @@
             // dataGridViewReporte
             // 
             this.dataGridViewReporte.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewReporte.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Nombre,
+            this.Taller});
             this.dataGridViewReporte.Location = new System.Drawing.Point(594, 68);
             this.dataGridViewReporte.Name = "dataGridViewReporte";
             this.dataGridViewReporte.RowHeadersWidth = 51;
@@ -295,6 +300,7 @@
             this.buttonMostrar.TabIndex = 27;
             this.buttonMostrar.Text = "Mostrar Datos";
             this.buttonMostrar.UseVisualStyleBackColor = true;
+            this.buttonMostrar.Click += new System.EventHandler(this.buttonMostrar_Click);
             // 
             // buttonOrdenar
             // 
@@ -332,6 +338,20 @@
             this.dataGridViewEstudiantes.RowTemplate.Height = 24;
             this.dataGridViewEstudiantes.Size = new System.Drawing.Size(609, 150);
             this.dataGridViewEstudiantes.TabIndex = 31;
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.MinimumWidth = 6;
+            this.Nombre.Name = "Nombre";
+            this.Nombre.Width = 125;
+            // 
+            // Taller
+            // 
+            this.Taller.HeaderText = "Taller";
+            this.Taller.MinimumWidth = 6;
+            this.Taller.Name = "Taller";
+            this.Taller.Width = 125;
             // 
             // Form1
             // 
@@ -413,6 +433,8 @@
         private System.Windows.Forms.Button buttonMEstudiantes;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.DataGridView dataGridViewEstudiantes;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Taller;
     }
 }
 

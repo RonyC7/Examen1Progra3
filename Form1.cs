@@ -181,5 +181,72 @@ namespace Examen1Progra3
                 MessageBox.Show($"Error al guardar los datos de la inscripción: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void buttonMostrar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                dataGridViewReporte.Rows.Clear();
+
+                string[] inscripciones = File.ReadAllLines("Inscripciones.txt");
+
+                foreach (string inscripcion in inscripciones)
+                {
+                    string[] campos = inscripcion.Split(',');
+
+                    if (campos.Length >= 2)
+                    {
+                        string nombreEstudiante = ObtenerNombreEstudiante(campos[0]);
+
+                        string nombreTaller = ObtenerNombreTaller(campos[1]);
+
+                        dataGridViewReporte.Rows.Add(nombreEstudiante, nombreTaller);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al mostrar los datos: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private string ObtenerNombreEstudiante(string dpi)
+        {
+            string nombreEstudiante = "";
+            if (File.Exists("Alumnos.txt"))
+            {
+                string[] lineas = File.ReadAllLines("Alumnos.txt");
+                foreach (string linea in lineas)
+                {
+                    string[] campos = linea.Split(',');
+                    if (campos.Length >= 3 && campos[0] == dpi)
+                    {
+                        nombreEstudiante = campos[1];
+                        break;
+                    }
+                }
+            }
+            return nombreEstudiante;
+        }
+
+        private string ObtenerNombreTaller(string codigoTaller)
+        {
+            string nombreTaller = "";
+            if (File.Exists("Talleres.txt"))
+            {
+                string[] lineas = File.ReadAllLines("Talleres.txt");
+                foreach (string linea in lineas)
+                {
+                    string[] campos = linea.Split(',');
+                    if (campos.Length >= 3 && campos[0] == codigoTaller)
+                    {
+                        nombreTaller = campos[1];
+                        break;
+                    }
+                }
+            }
+            return nombreTaller;
+        }
+
     }
 }
