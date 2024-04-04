@@ -131,12 +131,13 @@
             // 
             // btnGuardarAlumno
             // 
+            this.btnGuardarAlumno.BackColor = System.Drawing.Color.MediumSpringGreen;
             this.btnGuardarAlumno.Location = new System.Drawing.Point(436, 83);
             this.btnGuardarAlumno.Name = "btnGuardarAlumno";
             this.btnGuardarAlumno.Size = new System.Drawing.Size(112, 42);
             this.btnGuardarAlumno.TabIndex = 8;
             this.btnGuardarAlumno.Text = "Guardar Datos";
-            this.btnGuardarAlumno.UseVisualStyleBackColor = true;
+            this.btnGuardarAlumno.UseVisualStyleBackColor = false;
             this.btnGuardarAlumno.Click += new System.EventHandler(this.btnGuardarAlumno_Click);
             // 
             // textBoxCodigoTaller
@@ -189,12 +190,13 @@
             // 
             // btnGuardarTaller
             // 
+            this.btnGuardarTaller.BackColor = System.Drawing.Color.MediumSpringGreen;
             this.btnGuardarTaller.Location = new System.Drawing.Point(436, 286);
             this.btnGuardarTaller.Name = "btnGuardarTaller";
             this.btnGuardarTaller.Size = new System.Drawing.Size(112, 38);
             this.btnGuardarTaller.TabIndex = 16;
             this.btnGuardarTaller.Text = "Guardar Datos";
-            this.btnGuardarTaller.UseVisualStyleBackColor = true;
+            this.btnGuardarTaller.UseVisualStyleBackColor = false;
             this.btnGuardarTaller.Click += new System.EventHandler(this.btnGuardarTaller_Click);
             // 
             // label9
@@ -259,12 +261,13 @@
             // 
             // btnGuardarInscripcion
             // 
+            this.btnGuardarInscripcion.BackColor = System.Drawing.Color.MediumSpringGreen;
             this.btnGuardarInscripcion.Location = new System.Drawing.Point(436, 461);
             this.btnGuardarInscripcion.Name = "btnGuardarInscripcion";
             this.btnGuardarInscripcion.Size = new System.Drawing.Size(112, 41);
             this.btnGuardarInscripcion.TabIndex = 24;
             this.btnGuardarInscripcion.Text = "Guardar Datos";
-            this.btnGuardarInscripcion.UseVisualStyleBackColor = true;
+            this.btnGuardarInscripcion.UseVisualStyleBackColor = false;
             this.btnGuardarInscripcion.Click += new System.EventHandler(this.btnGuardarInscripcion_Click);
             // 
             // label13
@@ -291,22 +294,24 @@
             // 
             // buttonMostrar
             // 
+            this.buttonMostrar.BackColor = System.Drawing.Color.LightSalmon;
             this.buttonMostrar.Location = new System.Drawing.Point(932, 13);
             this.buttonMostrar.Name = "buttonMostrar";
             this.buttonMostrar.Size = new System.Drawing.Size(103, 36);
             this.buttonMostrar.TabIndex = 27;
             this.buttonMostrar.Text = "Mostrar Datos";
-            this.buttonMostrar.UseVisualStyleBackColor = true;
+            this.buttonMostrar.UseVisualStyleBackColor = false;
             this.buttonMostrar.Click += new System.EventHandler(this.buttonMostrar_Click);
             // 
             // buttonOrdenar
             // 
+            this.buttonOrdenar.BackColor = System.Drawing.Color.Orange;
             this.buttonOrdenar.Location = new System.Drawing.Point(594, 239);
             this.buttonOrdenar.Name = "buttonOrdenar";
             this.buttonOrdenar.Size = new System.Drawing.Size(205, 35);
             this.buttonOrdenar.TabIndex = 28;
             this.buttonOrdenar.Text = "Ordenar Alfabeticamente";
-            this.buttonOrdenar.UseVisualStyleBackColor = true;
+            this.buttonOrdenar.UseVisualStyleBackColor = false;
             this.buttonOrdenar.Click += new System.EventHandler(this.buttonOrdenar_Click);
             // 
             // Nombre
@@ -325,18 +330,20 @@
             // 
             // btnCantidadAlumnos
             // 
+            this.btnCantidadAlumnos.BackColor = System.Drawing.Color.LightCoral;
             this.btnCantidadAlumnos.Location = new System.Drawing.Point(847, 239);
             this.btnCantidadAlumnos.Name = "btnCantidadAlumnos";
             this.btnCantidadAlumnos.Size = new System.Drawing.Size(188, 35);
             this.btnCantidadAlumnos.TabIndex = 29;
             this.btnCantidadAlumnos.Text = "Cantidad Total Estudiantes";
-            this.btnCantidadAlumnos.UseVisualStyleBackColor = true;
+            this.btnCantidadAlumnos.UseVisualStyleBackColor = false;
             this.btnCantidadAlumnos.Click += new System.EventHandler(this.btnCantidadAlumnos_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.PaleTurquoise;
             this.ClientSize = new System.Drawing.Size(1061, 554);
             this.Controls.Add(this.btnCantidadAlumnos);
             this.Controls.Add(this.buttonOrdenar);
